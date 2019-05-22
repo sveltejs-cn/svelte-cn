@@ -11,3 +11,6 @@
     * [Transition参数](chapter2/Transitions.md#Transition参数)
     * [自定义过渡函数](chapter2/Transitions.md#自定义过渡函数)
     * [Transition事件](chapter2/Transitions.md#Transition事件)
+  * [Animations](chapter2/Animations.md)
+    * [Animation参数](chapter2/Animations.md#Animation参数)
+    * [自定义Animation函数](chapter2/Animations.md#自定义Animation函数)
