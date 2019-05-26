@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>section1 · GitBook</title>
+        <title>&lt;script&gt; · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="section2.html" />
+    <link rel="next" href="module.html" />
     
     
     <link rel="prev" href="./" />
@@ -107,7 +107,7 @@
                 <a href="./">
             
                     
-                    第一章
+                    组件格式
             
                 </a>
             
@@ -116,12 +116,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="section1.html">
+        <li class="chapter active" data-level="1.2.1" data-path="script.html">
             
-                <a href="section1.html">
+                <a href="script.html">
             
                     
-                    section1
+                    &lt;script&gt;
             
                 </a>
             
@@ -129,12 +129,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="section2.html">
+        <li class="chapter " data-level="1.2.2" data-path="module.html">
             
-                <a href="section2.html">
+                <a href="module.html">
             
                     
-                    section2
+                    &lt;script content="module"&gt;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="style.html">
+            
+                <a href="style.html">
+            
+                    
+                    &lt;style&gt;
             
                 </a>
             
@@ -403,7 +416,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >section1</a>
+        <a href=".." >&lt;script&gt;</a>
     </h1>
 </div>
 
@@ -418,7 +431,25 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="section1">section1</h3>
+                                <h3 id="script">script</h3>
+<p>&#x4E00;&#x4E2A;<code>script</code>&#x533A;&#x57DF;&#x542B;&#x6709;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x5B9E;&#x4F8B;&#x521B;&#x5EFA;&#x65F6;&#x7684;&#x8FD0;&#x884C;Javascript&#x4EE3;&#x7801;&#x3002;
+&#x53D8;&#x91CF;&#x7533;&#x660E;&#xFF08;&#x6216;&#x8005;&#x5F15;&#x5165;&#x7684;&#x53D8;&#x91CF;&#xFF09;&#x5728;&#x7EC4;&#x4EF6;&#x6807;&#x7B7E;&#x9876;&#x90E8;&#x663E;&#x793A;&#x7533;&#x660E;&#x3002;
+&#x8FD9;&#x91CC;&#x6709;4&#x6761;&#x89C4;&#x5219;&#xFF1A;</p>
+<ol>
+<li>export &#x7528;&#x6765;&#x7533;&#x660E;&#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;</li>
+</ol>
+<p>Svelte &#x4F7F;&#x7528; export &#x8FD9;&#x4E2A;&#x5173;&#x952E;&#x5B57;&#x6807;&#x8BC6;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x7533;&#x660E;&#x4F5C;&#x4E3A;&#x7EC4;&#x4EF6;&#x7684;&#x5C5E;&#x6027;prop&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x7EC4;&#x4EF6;&#x7684;&#x4F7F;&#x7528;&#x8005;&#x901A;&#x8FC7;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5B83;&#x3002;</p>
+<p>&#x8D4B;&#x503C;&#x5206;&#x914D;&#x662F;&#x54CD;&#x5E94;&#x5F0F;&#x7684;</p>
+<p>&#x6539;&#x53D8;&#x7EC4;&#x4EF6;&#x7684;state&#x5E76;&#x89E6;&#x53D1;&#x7EC4;&#x4EF6;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x7ED9;&#x672C;&#x5730;&#x7684;&#x5DF2;&#x7533;&#x660E;&#x53D8;&#x91CF;&#x8D4B;&#x503C;</p>
+<p>&#x4F7F;&#x7528;&#x8868;&#x8FBE;&#x5F0F;&#xFF08;count += 1&#xFF09;&#x66F4;&#x65B0;count&#x7684;&#x503C;&#x548C;&#x7ED9;&#x5C5E;&#x6027;&#x8D4B;&#x503C;&#xFF08;obj.x = y&#xFF09;&#x662F;&#x7B49;&#x6548;&#x7684;&#x3002;</p>
+<p>&#x56E0;&#x4E3A;Svelte&#x7684;&#x54CD;&#x5E94;&#x5F0F;&#x662F;&#x57FA;&#x4E8E;&#x8D4B;&#x503C;&#x64CD;&#x4F5C;&#x7684;&#xFF0C;&#x4F7F;&#x7528;&#x5C5E;&#x6027;&#x65B9;&#x6CD5;&#x5982; .push &#x548C; .splice &#x5C06;&#x4E0D;&#x4F1A;&#x81EA;&#x52A8;&#x89E6;&#x53D1;&#x66F4;&#x65B0;&#x3002;&#x6709;&#x5173;&#x89E3;&#x51B3;&#x6B64;&#x95EE;&#x9898;&#x7684;&#x9009;&#x9879;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x6B64;&#x6559;&#x7A0B;</p>
+<p>3 &#x4F7F;&#x7528; $ &#x5C06;&#x8868;&#x8FBE;&#x5F0F;&#x8BBE;&#x4E3A;&#x54CD;&#x5E94;&#x5F0F;&#x7684;</p>
+<p>&#x4EFB;&#x4F55;&#x9876;&#x5C42;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#xFF08;&#x4E0D;&#x5305;&#x542B;&#x4EE3;&#x7801;&#x5757;&#x548C;&#x51FD;&#x6570;&#x7533;&#x660E;&#xFF09;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;$&#x7B26;&#x53F7;&#x8BBE;&#x7F6E;&#x6210;&#x54CD;&#x5E94;&#x5F0F;&#x7684;&#x3002;&#x8FD9;&#x662F;js&#x7684;&#x6807;&#x7B7E;&#x8BED;&#x6CD5;&#x3002;&#x5F53;&#x54CD;&#x5E94;&#x5F0F;&#x8868;&#x8FBE;&#x5F0F;&#x4F9D;&#x8D56;&#x7684;&#x503C;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x5B83;&#x4EEC;&#x4F1A;&#x5728;&#x7EC4;&#x4EF6;&#x66F4;&#x65B0;&#x524D;&#x7ACB;&#x5373;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;&#x662F;&#x4E00;&#x6761;&#x7531;&#x5B8C;&#x5168;&#x672A;&#x7533;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x7EC4;&#x6210;&#x7684;&#x8D4B;&#x503C;&#x8BED;&#x53E5;&#xFF0C;Svelte&#x4F1A;&#x66FF;&#x4F60;&#x63D2;&#x5165;&#x4E00;&#x4E2A;let&#x7533;&#x660E;&#x3002;</p>
+<p>4 &#x4E3A;Store&#x6DFB;&#x52A0;$&#x524D;&#x7F00;&#x6765;&#x8BBF;&#x95EE;&#x5B83;&#x4EEC;&#x7684;&#x503C;</p>
+<p>&#x4EFB;&#x4F55;&#x65F6;&#x5019;&#xFF0C;&#x5BF9;&#x4E8E;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;Store&#xFF0C;&#x4F60;&#x90FD;&#x53EF;&#x4EE5;&#x5728;&#x7EC4;&#x4EF6;&#x5185;&#x90E8;&#x4E3A;&#x8BE5;Store&#x7684;&#x5F15;&#x7528;&#x6DFB;&#x52A0;$&#x5B57;&#x7B26;&#x524D;&#x7F00;&#x6765;&#x8BBF;&#x95EE;&#x5B83;&#x7684;&#x503C;&#x3002;&#x8FD9;&#x4F1A;&#x5BFC;&#x81F4;Svelte&#x7533;&#x660E;&#x6709;&#x524D;&#x7F00;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;Store&#x8BA2;&#x9605;&#x7136;&#x540E;&#x518D;&#x9002;&#x5F53;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x53D6;&#x6D88;&#x8FD9;&#x4E2A;&#x8BA2;&#x9605;&#x3002;</p>
+<p>&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x5FC5;&#x987B;&#x5728;&#x7EC4;&#x4EF6;&#x7684;&#x9876;&#x5C42;&#x7533;&#x660E;Store&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x5728;if&#x4EE3;&#x7801;&#x5757;&#x4E2D;</p>
+<p>&#x672C;&#x5730;&#x7533;&#x660E;&#x7684;&#x53D8;&#x91CF;&#xFF08;&#x4E0D;&#x4EE3;&#x6307;store&#x7684;&#x503C;&#xFF09;&#x4E0D;&#x5141;&#x8BB8;&#x8FD8;&#x6709;$&#x524D;&#x7F00;</p>
 
                                 
                                 </section>
@@ -446,12 +477,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 第一章">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 组件格式">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="section2.html" class="navigation navigation-next " aria-label="Next page: section2">
+                <a href="module.html" class="navigation navigation-next " aria-label="Next page: &lt;script content="module"&gt;">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -462,7 +493,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"section1","level":"1.2.1","depth":2,"next":{"title":"section2","level":"1.2.2","depth":2,"path":"chapter1/section2.md","ref":"chapter1/section2.md","articles":[]},"previous":{"title":"第一章","level":"1.2","depth":1,"path":"chapter1/README.md","ref":"chapter1/README.md","articles":[{"title":"section1","level":"1.2.1","depth":2,"path":"chapter1/section1.md","ref":"chapter1/section1.md","articles":[]},{"title":"section2","level":"1.2.2","depth":2,"path":"chapter1/section2.md","ref":"chapter1/section2.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/section1.md","mtime":"2019-05-21T13:49:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-26T08:50:57.845Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"&lt;script&gt;","level":"1.2.1","depth":2,"next":{"title":"&lt;script content=\"module\"&gt;","level":"1.2.2","depth":2,"path":"chapter1/module.md","ref":"chapter1/module.md","articles":[]},"previous":{"title":"组件格式","level":"1.2","depth":1,"path":"chapter1/README.md","ref":"chapter1/README.md","articles":[{"title":"&lt;script&gt;","level":"1.2.1","depth":2,"path":"chapter1/script.md","ref":"chapter1/script.md","articles":[]},{"title":"&lt;script content=\"module\"&gt;","level":"1.2.2","depth":2,"path":"chapter1/module.md","ref":"chapter1/module.md","articles":[]},{"title":"&lt;style&gt;","level":"1.2.3","depth":2,"path":"chapter1/style.md","ref":"chapter1/style.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/script.md","mtime":"2019-05-26T14:21:09.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-26T12:45:22.883Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
