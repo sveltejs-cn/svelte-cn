@@ -14,3 +14,6 @@
   * [Animations](chapter2/Animations.md)
     * [Animation参数](chapter2/Animations.md#Animation参数)
     * [自定义Animation函数](chapter2/Animations.md#自定义Animation函数)
+  * [svelte:self](chapter2/svelte-self.md)
+  * [svelte:component](chapter2/svelte-component.md)
+  * [svelte:window](chapter2/svelte-window.md)
