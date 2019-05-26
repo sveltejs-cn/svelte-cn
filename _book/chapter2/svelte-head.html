@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>svelte:component · GitBook</title>
+        <title>svelte:head · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="svelte-window.html" />
+    <link rel="next" href="svelte-options.html" />
     
     
-    <link rel="prev" href="svelte-self.html" />
+    <link rel="prev" href="svelte-body.html" />
     
 
     </head>
@@ -303,7 +303,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.6" data-path="svelte-component.html">
+        <li class="chapter " data-level="1.3.6" data-path="svelte-component.html">
             
                 <a href="svelte-component.html">
             
@@ -342,7 +342,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.9" data-path="svelte-head.html">
+        <li class="chapter active" data-level="1.3.9" data-path="svelte-head.html">
             
                 <a href="svelte-head.html">
             
@@ -403,7 +403,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >svelte:component</a>
+        <a href=".." >svelte:head</a>
     </h1>
 </div>
 
@@ -418,13 +418,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="sveltecomponent"><code>&lt;svelte:component&gt;</code></h3>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">svelte:component</span> <span class="hljs-attr">this</span>=<span class="hljs-string">{expression}</span>&gt;</span>
+                                <h3 id="sveltehead"><code>&lt;svelte:head&gt;</code></h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">svelte:head</span>&gt;</span>
 </code></pre>
-<p><code>&lt;svelte:component&gt;</code>&#x4F1A;&#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x4E86;<code>this</code>&#x5C5E;&#x6027;&#x7684;&#x7EC4;&#x4EF6;&#x6784;&#x9020;&#x51FD;&#x6570;&#x6765;&#x52A8;&#x6001;&#x7684;&#x6E32;&#x67D3;&#x7EC4;&#x4EF6;&#xFF0C;&#x5F53;&#x5C5E;&#x6027;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8BE5;&#x7EC4;&#x4EF6;&#x5C06;&#x88AB;&#x9500;&#x6BC1;&#x5E76;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x3002;</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">svelte:component</span> <span class="hljs-attr">this</span>=<span class="hljs-string">{currentSelection.component}</span> <span class="hljs-attr">foo</span>=<span class="hljs-string">{bar}</span>/&gt;</span>
+<p><code>&lt;svelte:head&gt;</code>&#x8BA9;&#x5728;<code>document.head</code>&#x4E2D;&#x63D2;&#x5165;&#x5143;&#x7D20;&#x6210;&#x4E3A;&#x53EF;&#x80FD;&#x3002;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x6E32;&#x67D3;&#x65F6;&#xFF0C;<code>head</code>&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x5355;&#x72EC;&#x7684;&#x66B4;&#x9732;&#x7ED9;&#x4E3B;html&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">svelte:head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;tutorial/dark-theme.css&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">svelte:head</span>&gt;</span>
 </code></pre>
-<p>&#x5982;&#x679C;<code>this</code>&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x4E3A;<code>false</code>,&#x5219;&#x4E0D;&#x56DE;&#x6E32;&#x67D3;&#x7EC4;&#x4EF6;&#x3002;</p>
 
                                 
                                 </section>
@@ -452,12 +453,12 @@
 
             
                 
-                <a href="svelte-self.html" class="navigation navigation-prev " aria-label="Previous page: svelte:self">
+                <a href="svelte-body.html" class="navigation navigation-prev " aria-label="Previous page: svelte:body">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="svelte-window.html" class="navigation navigation-next " aria-label="Next page: svelte:window">
+                <a href="svelte-options.html" class="navigation navigation-next " aria-label="Next page: svelte:options">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -468,7 +469,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"svelte:component","level":"1.3.6","depth":2,"next":{"title":"svelte:window","level":"1.3.7","depth":2,"path":"chapter2/svelte-window.md","ref":"chapter2/svelte-window.md","articles":[]},"previous":{"title":"svelte:self","level":"1.3.5","depth":2,"path":"chapter2/svelte-self.md","ref":"chapter2/svelte-self.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/svelte-component.md","mtime":"2019-05-26T04:12:20.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-26T08:50:57.845Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"svelte:head","level":"1.3.9","depth":2,"next":{"title":"svelte:options","level":"1.3.10","depth":2,"path":"chapter2/svelte-options.md","ref":"chapter2/svelte-options.md","articles":[]},"previous":{"title":"svelte:body","level":"1.3.8","depth":2,"path":"chapter2/svelte-body.md","ref":"chapter2/svelte-body.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/svelte-head.md","mtime":"2019-05-26T08:29:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-26T08:50:57.845Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

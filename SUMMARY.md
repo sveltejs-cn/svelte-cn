@@ -17,3 +17,6 @@
   * [svelte:self](chapter2/svelte-self.md)
   * [svelte:component](chapter2/svelte-component.md)
   * [svelte:window](chapter2/svelte-window.md)
+  * [svelte:body](chapter2/svelte-body.md)
+  * [svelte:head](chapter2/svelte-head.md)
+  * [svelte:options](chapter2/svelte-options.md)
