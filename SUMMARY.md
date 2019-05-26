@@ -1,9 +1,10 @@
 # Summary
 
 * [开始之前](README.md)
-* [第一章](chapter1/README.md)
-  * [section1](chapter1/section1.md)
-  * [section2](chapter1/section2.md)
+* [组件格式](chapter1/README.md)
+  * [&amp;lt;script&amp;gt;](chapter1/script.md)
+  * [&amp;lt;script content="module"&amp;gt;](chapter1/module.md)
+  * [&amp;lt;style&amp;gt;](chapter1/style.md)
 * [模版语法](chapter2/README.md)
   * [Classes](chapter2/Classes.md)
   * [Actions](chapter2/Actions.md)
