@@ -21,4 +21,4 @@
   * [svelte:body](chapter2/svelte-body.md)
   * [svelte:head](chapter2/svelte-head.md)
   * [svelte:options](chapter2/svelte-options.md)
-  * [svelte:@debug](chapter2/debug.md)
+  * [@debug](chapter2/debug.md)
