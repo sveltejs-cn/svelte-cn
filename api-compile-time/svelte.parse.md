@@ -8,7 +8,7 @@ ast: object = svelte.parse(
 )
 ```
 
-parse 函数用来解析一个组件并返回它的抽象语法树。
+`parse` 函数用来解析一个组件并返回它的抽象语法树。
 
 ```js
 const svelte = require('svelte/compiler');
@@ -16,4 +16,4 @@ const svelte = require('svelte/compiler');
 const ast = svelte.parse(source, { filename: 'App.svelte' });
 ```
 
-与编译用的 generate: false 选项不同的是，这个只会进行解析，不会做对这个组件做更多的验证或分析。
+与编译用的 `generate: false` 选项不同的是，这个只会进行解析，不会做对这个组件做更多的验证或分析。
