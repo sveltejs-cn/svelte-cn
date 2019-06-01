@@ -7,7 +7,7 @@
 <svelte:window bind:prop={value}/>
 ```
 
-`<svelte：window>`支持以这种形式给`window`对象添加事件监听，而且不用关心当组件组件的移除或服务端渲染时对于是否存在`window`对象检测。
+`<svelte：window>` 支持以这种形式给 `window` 对象添加事件监听，而且不用关心当组件组件的移除或服务端渲染时对于是否存在 `window` 对象检测。
 
 ```html
 <script>
@@ -31,4 +31,4 @@
 ```html
 <svelte:window bind:scrollY={y}/>
 ```
-> 除`scrollX`和`scrollY`之外其余都是只读的。
+> 除 `scrollX` 和 `scrollY` 之外其余都是只读的。

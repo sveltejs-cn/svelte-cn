@@ -44,9 +44,9 @@ transition = (node: HTMLElement, params: any) => {
 	tick?: (t: number, u: number) => void
 }
 ```
-transition是在元素的状态变更的时候触发的，如元素的进入和离开。过渡函数在组件首次挂载的时候不会执行，后续的更新才会执行。
+`transition` 是在元素的状态变更的时候触发的，如元素的进入和离开。过渡函数在组件首次挂载的时候不会执行，后续的一连串的更新才会执行。
 
-在逻辑代码块中的元素会一直在DOM中，直到所有的过渡动画执行完成。
+在正在离开的块中的元素会一直在 `DOM` 中，直到所有的过渡动画执行完成。
 ```html
 {#if visible}
 	<div transition:fade>
@@ -54,9 +54,9 @@ transition是在元素的状态变更的时候触发的，如元素的进入和�
 	</div>
 {/if}
 ```
-`transition: `是一个双向的过渡，意思是在变化的执行过程中平滑的来回切换执行方向。
+`transition: ` 表明是一个双向的过渡，意思是在变化的执行过程中平滑的来回切换执行方向。
 
-`in: `和`out:`指令不是双向的。过渡执行的过程中，切换至离开动画，进入动画会继续执行，且与离开动画并存。如果之前离开的动画还未执行完成，会重新开启动画。
+`in: ` 和 `out:` 指令不是双向的。进入的过渡执行的过程中，切换至离开动画，进入动画会继续执行，且与离开动画并存。如果之前离开的动画还未执行完成，会重新开启离开的动画。
 
 ```html
 {#if visible}
@@ -65,11 +65,11 @@ transition是在元素的状态变更的时候触发的，如元素的进入和�
 	</div>
 {/if}
 ```
-> 默认情况下，过渡动画在首次渲染的时候不会执行，你可以在[创建组件](https://note.youdao.com/)的时候，通过修改`intro: true`来修改。
+> 默认情况下，过渡动画在首次渲染的时候不会执行，你可以在[创建组件](https://svelte.dev/docs#Client-side_component_API)的时候，通过定义 `intro: true` 来修改默认行为。
 
 #### <p id="Transition参数">Transition参数</p>
 
-和其他动作属性一样，transition也可自定义参数。
+和 `Actions` 一样，`transition` 也可自定义参数。
 ```html
 {#if visible}
 	<div transition:fade="{{ duration: 2000 }}">
@@ -78,11 +78,11 @@ transition是在元素的状态变更的时候触发的，如元素的进入和�
 {/if}
 ```
 
-`{{curlies}}`这种双大括号并不是什么特殊的语法，只是一个在表达式标签中包含一个对象字面量。
+> `{{curlies}}` 这种双大括号并不是什么特殊的语法，只是一个在表达式标签中包含一个对象字面量。
 
-#### <p id="自定义过渡函数">自定义过渡函数</p>
+#### <p id="自定义过渡函数">自定义transition函数</p>
 
-Transitions支持自定义过渡函数，如果返回的对象有`css`的函数，`Svelte`会在这个元素上播放`css`动画。
+`Transitions` 支持自定义过渡函数，如果返回的对象有 `css` 的函数，`Svelte` 会在这个元素上创建并播放 `css` 动画。
 
 ```html
 <script>
@@ -108,13 +108,11 @@ Transitions支持自定义过渡函数，如果返回的对象有`css`的函数�
 	</div>
 {/if}
 ```
-在`easing`函数执行完成之后，会传入`css`函数参数`t`，且其值为`1`或`0`。在进入动画中，是从`0`变化到`1`，在离开动画中，是从`1`变化到`0`-换句话说，`1`表示元素的初始状态，就好像没有发生过变化。参数`u`就等同于`1-t`。
+在 `easing` 函数执行完成之后，会传入 `css` 函数 `1` 或 `0` 的参数 `t` 。在进入动画中，是从 `0` 变化到 `1` ，在离开动画中，是从 `1` 变化到 `0` -换句话说，`1` 表示元素的初始状态，就好像没有发生过变化。参数 `u` 等同于 `1-t`。
 
-在变化的过程中，函数被不同的参数`t`和`u`反复调用。
+在过渡开始之前，函数被不同的参数 `t` 和 `u` 反复调用。
 
-A custom transition function can also return a tick function, which is called during the transition with the same t and u arguments.
-
-自定义的过渡函数，也可以返回一个tick函数，该函数在过渡变化的过程中同样会以参数`t`和`u`被调用。
+自定义的过渡函数，也可以返回一个tick函数，该函数在过渡变化的过程中同样会以参数 `t` 和 `u` 被调用。
 
 ```html
 <script>
@@ -147,13 +145,13 @@ A custom transition function can also return a tick function, which is called du
 	</p>
 {/if}
 ```
-> 尽可能的使用`css`而不是`tick`函数-这样的话，css的动画就会在主线程上运行，防止在性能差的设备上卡顿。
+> 尽可能的使用 `css` 而不是 `tick` 函数-因为css的动画就会在主线程上运行，这样可以防止在性能差的设备上卡顿。
 
-transition如果返回了一个函数，而不是transition对象，那么这个函数会在下一个微任务被调用。这样就支持多个transition同时进行，这也是为什么可以实现交叉淡入的效果。
+`transition` 如果返回了一个函数，而不是 `transition` 对象，那么这个函数会在下一个微任务被调用。这样就支持多个 `transition` 同时进行，这也是为什么可以实现交叉淡入的效果。
 
 #### <p id="Transition事件">Transition事件</p>
 
-一个定义了transition的元素，除了会调用标准的DOM事件，还会调用以下这些事件：
+一个定义了 `transition` 的元素，除了会调用标准的 `DOM` 事件，还会调用以下这些事件：
 - `introstart`
 - `introend`
 - `outrostart`
@@ -173,7 +171,7 @@ transition如果返回了一个函数，而不是transition对象，那么这个
 {/if}
 ```
 
-`local transition`只会在其所属块的创建或销毁的时候播放，而不是在其父级块的创建或销毁的时候。
+`local transition` 只会在其所属块的创建或销毁的时候播放，而不是在其父级块的创建或销毁的时候。
 
 ```html
 {#if x}
