@@ -46,7 +46,7 @@ transition = (node: HTMLElement, params: any) => {
 ```
 `transition` 是在元素的状态变更的时候触发的，如元素的进入和离开。过渡函数在组件首次挂载的时候不会执行，后续的一连串的更新才会执行。
 
-在正在离开的块中的元素会一直在 `DOM` 中，直到所有的过渡动画执行完成。
+在正在离开的块中的元素会一直在 DOM 中，直到所有的过渡动画执行完成。
 ```html
 {#if visible}
 	<div transition:fade>
@@ -82,7 +82,7 @@ transition = (node: HTMLElement, params: any) => {
 
 #### <p id="自定义过渡函数">自定义transition函数</p>
 
-`Transitions` 支持自定义过渡函数，如果返回的对象有 `css` 的函数，`Svelte` 会在这个元素上创建并播放 `css` 动画。
+`Transitions` 支持自定义过渡函数，如果返回的对象有 css 的函数，Svelte 会在这个元素上创建并播放 `css` 动画。
 
 ```html
 <script>
@@ -145,7 +145,7 @@ transition = (node: HTMLElement, params: any) => {
 	</p>
 {/if}
 ```
-> 尽可能的使用 `css` 而不是 `tick` 函数-因为css的动画就会在主线程上运行，这样可以防止在性能差的设备上卡顿。
+> 尽可能的使用 css 而不是 `tick` 函数-因为css的动画就会在主线程上运行，这样可以防止在性能差的设备上卡顿。
 
 `transition` 如果返回了一个函数，而不是 `transition` 对象，那么这个函数会在下一个微任务被调用。这样就支持多个 `transition` 同时进行，这也是为什么可以实现交叉淡入的效果。
 

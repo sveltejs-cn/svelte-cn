@@ -8,7 +8,7 @@
 {@debug var1, var2, ..., varN}
 ```
 
-`{@debug ...}` 可以替代 `console.log(...)` 。每当特定值在修改的时候，它会记录下来，而且如果你的 `devtools` 打开的状态下，会阻断代码的执行。
+`{@debug ...}` 可以替代 `console.log(...)` 。每当特定值在修改的时候，它会记录下来，而且如果你的 devtools 打开的状态下，会阻断代码的执行。
 
 ```html
 <script>

@@ -29,7 +29,7 @@ action = (node: HTMLElement, parameters: any) => {
 <div use:foo></div>
 ```
 
-`Action` 可以有多个参数，如果返回对象有 `update` 方法，每当这些参数改变的时候，这个函数会在Svelte已经更新标签之后会被立即被调用。
+`Action` 可以有多个参数，如果返回对象有 `update` 方法，每当这些参数改变的时候，这个函数会在 Svelte 已经更新标签之后会被立即被调用。
 ```html
 <script>
 	export let bar;
@@ -51,4 +51,4 @@ action = (node: HTMLElement, parameters: any) => {
 
 <div use:foo={bar}></div>
 ```
-> 不用担心如果我们为每个组件实例都重新声明 `foo` 的 `Action` 会有什么影响- `Svelte` 会从组件的定义中移除不依赖于本地状态的函数。
+> 不用担心如果我们为每个组件实例都重新声明 `foo` 的 `Action` 会有什么影响- Svelte 会从组件的定义中移除不依赖于本地状态的函数。

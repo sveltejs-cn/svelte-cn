@@ -76,9 +76,9 @@ DOMRect {
 {/each}
 ```
 
-`Animations` 可以是自定义的函数，函数的参数分别是 `node` 、`animation` 对象、及一个任何格式的参数。`animation` 对象参数包含 `from` 和 `to` 属性，且都包含了能描述元素的物理几何位置 `start` 和 `end` 的 `DOMRect` 属性。当列表数据发生重排，且 `DOM` 已经完成更新，`from` 属性表示的是元素在起始位置的 `DOMRect` ，`to` 属性表示的是元素结束位置的 `DOMRect` 。
+`Animations` 可以是自定义的函数，函数的参数分别是 `node` 、`animation` 对象、及一个任何格式的参数。`animation` 对象参数包含 `from` 和 `to` 属性，且都包含了能描述元素的物理几何位置 `start` 和 `end` 的 DOMRect 属性。当列表数据发生重排，且 DOM 已经完成更新，`from` 属性表示的是元素在起始位置的 DOMRect，`to` 属性表示的是元素结束位置的 DOMRect。
 
-如果返回的对象有 `css` 的方法，`Svelte` 会为这个元素创建并执行一个 `css` 的动画。
+如果返回的对象有 css 的方法，`Svelte` 会为这个元素创建并执行一个 css 的动画。
 
 当缓动动画执行的时候，`t` 从 `0` 变化到 `1`，且会被作为参数传入到css方法中，参数 `u` 等同于 `1-t`。
 
@@ -113,4 +113,4 @@ DOMRect {
 	<div animate:whizz>{item}</div>
 {/each}
 ```
-> 尽可能的使用 `css` 而不是 `tick` 函数，之所以这样做-是因为 `css` 动画可以在主线程上进行，防止在低端设备出现卡顿。
+> 尽可能的使用 css 而不是 `tick` 函数，之所以这样做-是因为 css 动画可以在主线程上进行，防止在低端设备出现卡顿。
