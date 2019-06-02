@@ -1,0 +1,835 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>svelte.walk · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="svelte.VERSION.html" />
+    
+    
+    <link rel="prev" href="svelte.preprocess.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    开始之前
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    组件格式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/script.html">
+            
+                <a href="../chapter1/script.html">
+            
+                    
+                    &lt;script&gt;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/module.html">
+            
+                <a href="../chapter1/module.html">
+            
+                    
+                    &lt;script content="module"&gt;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter1/style.html">
+            
+                <a href="../chapter1/style.html">
+            
+                    
+                    &lt;style&gt;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/README.md">
+            
+                <span>
+            
+                    
+                    模版语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/Tags.html">
+            
+                <a href="../chapter2/Tags.html">
+            
+                    
+                    Tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/Attributes.html">
+            
+                <a href="../chapter2/Attributes.html">
+            
+                    
+                    Attributes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2/Text%20expression.md">
+            
+                <span>
+            
+                    
+                    Text expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter2/HTML%20expressions.md">
+            
+                <span>
+            
+                    
+                    HTML expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter2/If%20blocks.md">
+            
+                <span>
+            
+                    
+                    If blocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../chapter2/Each%20blocks.md">
+            
+                <span>
+            
+                    
+                    Each blocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../chapter2/Await%20block.md">
+            
+                <span>
+            
+                    
+                    Await blocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../chapter2/Dom%20event.md">
+            
+                <span>
+            
+                    
+                    DOM events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../chapter2/Component%20event.md">
+            
+                <span>
+            
+                    
+                    Component events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../chapter2/Element%20bindings.md">
+            
+                <span>
+            
+                    
+                    Element bindings
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.10.1" data-path="../chapter2/Element%20bindings.md">
+            
+                <span>
+            
+                    
+                    Binding related elements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.2" data-path="../chapter2/Element%20bindings.md">
+            
+                <span>
+            
+                    
+                    Binding  value
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.3" data-path="../chapter2/Element%20bindings.md">
+            
+                <span>
+            
+                    
+                    Media element bindings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.4" data-path="../chapter2/Element%20bindings.md">
+            
+                <span>
+            
+                    
+                    Binding a DOM node
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../chapter2/Component%20Bindings.md">
+            
+                <span>
+            
+                    
+                    Component bindings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../chapter2/Classes.html">
+            
+                <a href="../chapter2/Classes.html">
+            
+                    
+                    Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../chapter2/Actions.html">
+            
+                <a href="../chapter2/Actions.html">
+            
+                    
+                    Actions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../chapter2/Transitions.html">
+            
+                <a href="../chapter2/Transitions.html">
+            
+                    
+                    Transitions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.14.1" data-path="../chapter2/Transitions.html">
+            
+                <a href="../chapter2/Transitions.html#Transition参数">
+            
+                    
+                    Transition参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14.2" data-path="../chapter2/Transitions.html">
+            
+                <a href="../chapter2/Transitions.html#自定义过渡函数">
+            
+                    
+                    自定义过渡函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14.3" data-path="../chapter2/Transitions.html">
+            
+                <a href="../chapter2/Transitions.html#Transition事件">
+            
+                    
+                    Transition事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../chapter2/Animations.html">
+            
+                <a href="../chapter2/Animations.html">
+            
+                    
+                    Animations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.15.1" data-path="../chapter2/Animations.html">
+            
+                <a href="../chapter2/Animations.html#Animation参数">
+            
+                    
+                    Animation参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15.2" data-path="../chapter2/Animations.html">
+            
+                <a href="../chapter2/Animations.html#自定义Animation函数">
+            
+                    
+                    自定义Animation函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../chapter2/svelte-self.html">
+            
+                <a href="../chapter2/svelte-self.html">
+            
+                    
+                    svelte:self
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../chapter2/svelte-component.html">
+            
+                <a href="../chapter2/svelte-component.html">
+            
+                    
+                    svelte:component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="../chapter2/svelte-window.html">
+            
+                <a href="../chapter2/svelte-window.html">
+            
+                    
+                    svelte:window
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="../chapter2/svelte-body.html">
+            
+                <a href="../chapter2/svelte-body.html">
+            
+                    
+                    svelte:body
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="../chapter2/svelte-head.html">
+            
+                <a href="../chapter2/svelte-head.html">
+            
+                    
+                    svelte:head
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="../chapter2/svelte-options.html">
+            
+                <a href="../chapter2/svelte-options.html">
+            
+                    
+                    svelte:options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="../chapter2/debug.html">
+            
+                <a href="../chapter2/debug.html">
+            
+                    
+                    @debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    编译时
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="svelte.compile.html">
+            
+                <a href="svelte.compile.html">
+            
+                    
+                    svelte.compile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="svelte.parse.html">
+            
+                <a href="svelte.parse.html">
+            
+                    
+                    svelte.parse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="svelte.preprocess.html">
+            
+                <a href="svelte.preprocess.html">
+            
+                    
+                    svelte.preprocess
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="svelte.walk.html">
+            
+                <a href="svelte.walk.html">
+            
+                    
+                    svelte.walk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="svelte.VERSION.html">
+            
+                <a href="svelte.VERSION.html">
+            
+                    
+                    svelte.VERSION
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >svelte.walk</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <pre><code class="lang-js">walk(ast: Node, {
+    enter(node: Node, parent: Node, prop: string, index: number)?: <span class="hljs-keyword">void</span>,
+    leave(node: Node, parent: Node, prop: string, index: number)?: <span class="hljs-keyword">void</span>
+})
+</code></pre>
+<p><code>walk</code> &#x51FD;&#x6570;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7F16;&#x8BD1;&#x5668;&#x81EA;&#x5DF1;&#x5185;&#x7F6E;&#x7684; <a href="https://github.com/Rich-Harris/estree-walker" target="_blank">estree-walker</a> &#x5B9E;&#x4F8B;&#x6765;&#x904D;&#x5386;&#x89E3;&#x6790;&#x5668;&#x751F;&#x6210;&#x7684;&#x62BD;&#x8C61;&#x8BED;&#x6CD5;&#x6811;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> svelte = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;svelte/compiler&apos;</span>);
+svelte.walk(ast, {
+    enter(node, parent, prop, index) {
+        do_something(node);
+        <span class="hljs-keyword">if</span> (should_skip_children(node)) {
+            <span class="hljs-keyword">this</span>.skip();
+        }
+    },
+    leave(node, parent, prop, index) {
+        do_something_else(node);
+    }
+});
+</code></pre>
+<p>&#x904D;&#x5386;&#x5668;&#x9700;&#x8981;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x8BED;&#x6CD5;&#x6811;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF08;&#x5305;&#x542B;&#x53EF;&#x9009;&#x7684;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;<code>enter</code> &#x548C; <code>leave</code>&#xFF09;&#x3002;&#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;<code>enter</code> &#x4F1A;&#x88AB;&#x8C03;&#x7528;&#xFF08;&#x5982;&#x679C;&#x4F20;&#x5165;&#x7684;&#x5BF9;&#x8C61;&#x4E2D;&#x5B58;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x8BDD;&#xFF09;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x9664;&#x975E;&#x662F; this.skip() &#x5728; <code>enter</code> &#x65B9;&#x6CD5;&#x4E2D;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x5426;&#x5219;&#x6BCF;&#x4E2A;&#x5B50;&#x8282;&#x70B9;&#x90FD;&#x4F1A;&#x88AB;&#x904D;&#x5386;&#xFF0C;&#x904D;&#x5386;&#x5B8C;&#x6210;&#x540E;&#xFF0C;<code>leave</code> &#x65B9;&#x6CD5;&#x4F1A;&#x5728;&#x8FD9;&#x4E2A;&#x8282;&#x70B9;&#x4E0A;&#x88AB;&#x8C03;&#x7528;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="svelte.preprocess.html" class="navigation navigation-prev " aria-label="Previous page: svelte.preprocess">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="svelte.VERSION.html" class="navigation navigation-next " aria-label="Next page: svelte.VERSION">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"svelte.walk","level":"1.4.4","depth":2,"next":{"title":"svelte.VERSION","level":"1.4.5","depth":2,"path":"api-compile-time/svelte.VERSION.md","ref":"api-compile-time/svelte.VERSION.md","articles":[]},"previous":{"title":"svelte.preprocess","level":"1.4.3","depth":2,"path":"api-compile-time/svelte.preprocess.md","ref":"api-compile-time/svelte.preprocess.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"api-compile-time/svelte.walk.md","mtime":"2019-06-02T14:46:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-02T14:52:07.237Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
