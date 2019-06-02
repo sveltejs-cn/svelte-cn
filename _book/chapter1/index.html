@@ -4,10 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第一章 · GitBook</title>
+        <title>组件格式 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
-        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="generator" content="GitBook 3.2.2">
         
         
         
@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="section1.html" />
+    <link rel="next" href="script.html" />
     
     
     <link rel="prev" href="../" />
@@ -107,7 +107,7 @@
                 <a href="./">
             
                     
-                    第一章
+                    组件格式
             
                 </a>
             
@@ -116,12 +116,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="section1.html">
+        <li class="chapter " data-level="1.2.1" data-path="script.html">
             
-                <a href="section1.html">
+                <a href="script.html">
             
                     
-                    section1
+                    &lt;script&gt;
             
                 </a>
             
@@ -129,12 +129,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="section2.html">
+        <li class="chapter " data-level="1.2.2" data-path="module.html">
             
-                <a href="section2.html">
+                <a href="module.html">
             
                     
-                    section2
+                    &lt;script content="module"&gt;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="style.html">
+            
+                <a href="style.html">
+            
+                    
+                    &lt;style&gt;
             
                 </a>
             
@@ -373,6 +386,90 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4" data-path="../api-compile-time/">
+            
+                <a href="../api-compile-time/">
+            
+                    
+                    编译时
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../api-compile-time/svelte.compile.html">
+            
+                <a href="../api-compile-time/svelte.compile.html">
+            
+                    
+                    svelte.compile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../api-compile-time/svelte.parse.html">
+            
+                <a href="../api-compile-time/svelte.parse.html">
+            
+                    
+                    svelte.parse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../api-compile-time/svelte.preprocess.html">
+            
+                <a href="../api-compile-time/svelte.preprocess.html">
+            
+                    
+                    svelte.preprocess
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../api-compile-time/svelte.walk.html">
+            
+                <a href="../api-compile-time/svelte.walk.html">
+            
+                    
+                    svelte.walk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../api-compile-time/svelte.VERSION.html">
+            
+                <a href="../api-compile-time/svelte.VERSION.html">
+            
+                    
+                    svelte.VERSION
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -403,7 +500,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第一章</a>
+        <a href=".." >组件格式</a>
     </h1>
 </div>
 
@@ -418,7 +515,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="&#x7B2C;&#x4E00;&#x7AE0;">&#x7B2C;&#x4E00;&#x7AE0;</h3>
+                                <h3 id="&#x7EC4;&#x4EF6;&#x683C;&#x5F0F;">&#x7EC4;&#x4EF6;&#x683C;&#x5F0F;</h3>
+<p>&#x7EC4;&#x4EF6;&#x662F;Svelte&#x5E94;&#x7528;&#x7684;&#x5185;&#x7F6E;&#x533A;&#x5757;&#xFF0C;&#x662F;&#x4F7F;&#x7528;HTML&#x7684;&#x6269;&#x5C55;&#x683C;&#x5F0F;&#x7684;&#x8BED;&#x8A00;&#x5199;&#x6210;.svelte&#x6587;&#x4EF6;</p>
+<p>&#x4E00;&#x5171;&#x5206;&#x4E3A;&#x4E09;&#x4E2A;&#x533A;&#x57DF;&#x3001;script&#x3001;style&#x548C;&#x6807;&#x7B7E;&#xFF08;&#x9009;&#x586B;&#xFF09;</p>
 
                                 
                                 </section>
@@ -451,7 +550,7 @@
                 </a>
                 
                 
-                <a href="section1.html" class="navigation navigation-next " aria-label="Next page: section1">
+                <a href="script.html" class="navigation navigation-next " aria-label="Next page: &lt;script&gt;">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -462,7 +561,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第一章","level":"1.2","depth":1,"next":{"title":"section1","level":"1.2.1","depth":2,"path":"chapter1/section1.md","ref":"chapter1/section1.md","articles":[]},"previous":{"title":"开始之前","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/README.md","mtime":"2019-05-21T13:49:52.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-26T08:50:57.845Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"组件格式","level":"1.2","depth":1,"next":{"title":"&lt;script&gt;","level":"1.2.1","depth":2,"path":"chapter1/script.md","ref":"chapter1/script.md","articles":[]},"previous":{"title":"开始之前","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter1/README.md","mtime":"2019-06-01T14:40:01.771Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-06-01T14:41:53.333Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
