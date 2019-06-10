@@ -1,14 +1,16 @@
-## Await blocks
+### Await
 
 ```html
 {#await expression}...{:then name}...{:catch name}...{/await}
-
+```
+```html
 {#await expression}...{:then name}...{/await}
-
+```
+```html
 {#await expression then name}...{/await}
 ```
 
-`await block` 可以让你处理，`Promise`的三种状态 `pending`, `fulfilled`, `rejected`
+`await` 可以让你分支处理 Promise 的三种状态 `pending`, `fulfilled`, `rejected`
 
 ```html
 {#await promise}
@@ -23,7 +25,7 @@
 {/await}
 ```
 
-如果`Promise` `reject`时，或者发生错误时，你不需要渲染任何东西，则`catch` 块可以被忽略。
+如果在 Promise `reject`时不需要渲染任何东西（或者不会出现错误），则可以省略 catch 块。
 
 ```html
 {#await promise}
@@ -34,8 +36,7 @@
 	<p>The value is {value}</p>
 {/await}
 ```
-
-如果你不关心 `pending` 状态，你也可以忽略 `initial` 块。
+如果你不关心`pending`状态，也可以省略初始化的状态。
 
 ```html
 {#await promise then value}
@@ -43,4 +44,3 @@
 {/await}
 ```
 
- 

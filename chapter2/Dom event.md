@@ -1,12 +1,14 @@
-### DOM 事件 (DOM events)
+### DOM events
 
 ```html
 on:eventname={handler}
+```
 
+```html
 on:eventname|modifiers={handler}
 ```
 
-你可以使用 `on:`的写法可以监听DOM 事件：
+你可以使用`on:`的指令来监听 DOM 事件：
 
 ```html
 <script>
@@ -21,24 +23,22 @@ on:eventname|modifiers={handler}
 	count: {count}
 </button>
 ```
-
-事件回调函数不会影响性能，会以内联的方式的声明。与属性一样，为了语法高亮，`指令`的值可以被`引号` 包裹。
-
+内联方式声明的处理函数，并不会影响性能。与其他属性一样，为了可以语法高亮显示，指令的值可以用引号包裹。
 ```html
 <button on:click="{() => count += 1}">
 	count: {count}
 </button>
 ```
 
-使用 `|` 字符来向DOM事件添加修饰符。
+使用 | 字符来向DOM事件添加修饰符。
 
-下面的修饰符都是可用的：
+可以使用以下修饰符：
 
-- preventDefault： 在 handeler 被调用前，调用 `event.preventDefault()`
-- stopPropagation: 阻止事件冒泡
-- passive： 提高触摸/滚动事件的滚动性能
-- capture：在捕获阶段而不是冒泡阶段，触发事件处理函数
-- once: 事件处理函数只会被执一次。
+- `preventDefault`： 在 handeler 执行前，调用 `event.preventDefault()`
+- `stopPropagation`: 调用`event.stopPropagation()`，阻止事件冒泡
+- `passive`： 提高触摸/滚动事件的滚动性能（ Svelte 会在支持地方默认使用它）
+- `capture`：在捕获阶段而不是冒泡阶段，触发事件处理函数
+- `once`: 事件处理函数被执一次后会被移除
 
 修饰符可以使用 `|` 链接起来：`on:click|once|capture={...}`
 
@@ -49,7 +49,7 @@ on:eventname|modifiers={handler}
 </form>
 ```
 
-如果 `on:` 指令，后面没有指定事件回调函数。意味着，这个组件的消费者，将会监听这个事件。
+如果 `on:` 指令没有值，则组件会转发这个事件，意味着组件的使用者，可以监听这个事件。
 
 ```html
 <button on:click>
@@ -57,7 +57,7 @@ on:eventname|modifiers={handler}
 </button>
 ```
 
-对于同样的事件，绑定多个事件处理函数，也可以。
+对于同样的事件，可以有多个事件监听者。
 
 ```html
 <script>
@@ -73,5 +73,3 @@ on:eventname|modifiers={handler}
 
 <button on:click={increment} on:click={track}>Click me!</button>
 ```
-
-## 
