@@ -9,7 +9,7 @@ walk(ast: Node, {
 
 `walk` 函数提供了一种方法，可以通过编译器自己内置的 [estree-walker](https://github.com/Rich-Harris/estree-walker) 实例来遍历解析器生成的抽象语法树的方法。
 
-```js
+```
 const svelte = require('svelte/compiler');
 svelte.walk(ast, {
 	enter(node, parent, prop, index) {
