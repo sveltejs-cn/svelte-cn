@@ -1,3 +1,5 @@
+### svelte.parse
+
 ```js
 ast: object = svelte.parse(
 	source: string,

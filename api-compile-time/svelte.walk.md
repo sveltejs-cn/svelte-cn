@@ -1,3 +1,5 @@
+### svelte.walk
+
 ```js
 walk(ast: Node, {
 	enter(node: Node, parent: Node, prop: string, index: number)?: void,
@@ -22,4 +24,4 @@ svelte.walk(ast, {
 });
 ```
 
-遍历器需要传入一个抽象语法树以及一个对象（包含可选的两个方法：`enter` 和 `leave`）。对于每个节点，`enter` 会被调用（如果传入的对象中存在这个方法的话）。接下来，除非是 this.skip() 在 `enter` 方法中被调用，否则每个子节点都会被遍历，遍历完成后，`leave` 方法会在这个节点上被调用。
+遍历器需要传入一个抽象语法树以及一个对象（包含可选的两个方法：`enter` 和 `leave`）。对于每个节点，`enter` 会被调用（如果传入的对象中存在这个方法的话）。接下来，除非是 `this.skip()` 在 `enter` 方法中被调用，否则每个子节点都会被遍历，遍历完成后，`leave` 方法会在这个节点上被调用。
