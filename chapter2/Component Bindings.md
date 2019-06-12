@@ -1,25 +1,27 @@
-### 组件绑定
+### Component bindings
 
 ```html
 bind:property={variable}
+```
 
+```html
 bind:this={component_instance}
 ```
 
-可以使用相同的机制绑定到组件属性.
+你可以使用相同的机制给组件绑定属性。
 
 ```html
 <Keypad bind:value={pin}/>
 ```
 
-组件同样支持 `bind:this`, 可以让你直接和组件实例交互。
+组件还支持`bind:this`，允许你以动态数据的方式与组件实例进行交互。
 
-> 注意，我们可以执行`{cart.empty}`而不是`{（）=>cart.empty（）}`，因为组件方法是闭包。当执行他们的时候，不需要担心。
+> 注意，当按钮首次渲染的时候，我们不能使用`{cart.empty}`，因为`cart`还是`undefined`，这样会抛出异常。
 
 ```html
 <ShoppingCart bind:this={cart}/>
 
-<button on:click={cart.empty}>
+<button on:click={() => cart.empty()}>
 	Empty shopping cart
 </button>
 ```

@@ -1,4 +1,4 @@
-### 条件渲染 (If blocks)
+### If blocks
 
 ```html
 {#if expression}...{/if}
@@ -16,7 +16,7 @@
 {/if}
 ```
 
-附加条件可以用`{:else if expression}`，也可以选择以`{:else}`结尾。
+可以用`{:else if expression}`添加附加条件，也可以选择是否以`{:else}`结尾。
 
 ```html
 {#if porridge.temperature > 100}
