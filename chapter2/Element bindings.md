@@ -1,18 +1,22 @@
-### 元素绑定（Element bindings）
+### Element bindings
 
 ```html
 bind:property={variable}
+```
 
+```html
 bind:group={variable}
+```
 
+```html
 bind:this={dom_node}
 ```
 
-数据通常从父级流向子级。`bind:`指令允许数据以另一种方式从子级流到父级。
 
-大多数的绑定，都需要指定特定元素。
 
-最简单的绑定一个属性的值，比如说，`input.value`
+数据通常从父级流向子级。`bind:`指令允许数据以另一种方式从子级流向父级。大多数的绑定是绑定在特定的元素。
+
+最简单反映了属性的值的绑定，例如`input.value`。
 
 ```html
 <input bind:value={name}>
@@ -21,7 +25,7 @@ bind:this={dom_node}
 <input type="checkbox" bind:checked={yes}>
 ```
 
-如果，属性值和属性名相同，也可以使用如下的写法：
+如果，属性值和属性名相同，也可以用简写的方式：
 
 ```html
 <!-- These are equivalent -->
@@ -29,7 +33,7 @@ bind:this={dom_node}
 <input bind:value>
 ```
 
-数值输入值是强制的；即使`input.value`是一个字符串，svelte将把它当作一个数字。如果输入为空或无效（在`type=“number”`的情况下），则该值为 `undefined`。
+强制输入的值是数字；即使`input.value`是一个字符串，svelte将把它当作一个数字。如果输入为空或无效（当`type="number"`），则该值为 `undefined`。
 
 ```html
 <input type="number" bind:value={num}>
@@ -37,8 +41,7 @@ bind:this={dom_node}
 ```
 
 
-
-#### 绑定相关元素
+#### Binding related elements
 
 可以使用 `bind:group` 来让 `input` 一起工作
 
@@ -60,9 +63,9 @@ bind:this={dom_node}
 <input type="checkbox" bind:group={fillings} value="Guac (extra)">
 ```
 
-#### 绑定 `<select>` 值
+#### Binding `<select>` value
 
-`<select>` 标签上的值，和被选择的`<option>` 标签的 `value` 属性有绑定关系， `value` 属性可以是任何值，而不仅仅是字符串
+`<select>`绑定的值，对应的是 selected 的`<option>`上的value属性的值，该值可以是任何值（不仅仅是字符串，可以是 DOM 中出现的值）。
 
 ```html
 <select bind:value={selected}>
@@ -72,7 +75,7 @@ bind:this={dom_node}
 </select>
 ```
 
-`<select multiple>` 标签，和 `checkbox` 组类似：
+`<select multiple>` 的表现和 `checkbox` 组一样：
 
 ```html
 <select multiple bind:value={fillings}>
@@ -83,24 +86,33 @@ bind:this={dom_node}
 </select>
 ```
 
-当 `<option>` 标签`value`属性的值，和`<option>` 中的文本内容相同，则 `value ` 属性可以呗省略。
+当 `<option>` 的`value`，和`<option>` 中的文本内容相同，则 `value ` 属性可以被省略。
 
-#### 绑定媒体元素
+```html
+<select multiple bind:value={fillings}>
+	<option>Rice</option>
+	<option>Beans</option>
+	<option>Cheese</option>
+	<option>Guac (extra)</option>
+</select>
+```
 
-类似于 `audio` 和 `video` 等媒体元素，他们有自己的一套绑定规则。
+#### Media element bindings
+
+媒体元素(`audio`和`video`)有自己的一套绑定规则：
 
 四个只读的属性
 
-- duration : video 播放的总长度，单位是秒
-- buffered
-- seekable
-- played
+- `duration`(只读) - video 的总时长，单位是秒
+- `buffered`(只读) - 一个`{start, end}`对象数组
+- `seekable`(只读) - 同上
+- `played`(只读) - 同上
 
-还有三个可以双向绑定的属性
+三个可以双向绑定的属性
 
-- currentTime： 当前视频的播放点
+- currentTime： 当前视频的播放的位置，单位是秒
 - paused： 是否是暂停
-- volume： 音量，在 0和 1 之间
+- volume： 音量，是`0`和`1`之间的值
 
 ```html
 <video
@@ -115,9 +127,9 @@ bind:this={dom_node}
 ></video>
 ```
 
-#### 绑定块级元素
+#### Block-level element bindings
 
-块级 元素有4个只读的绑定：
+块级元素有4个只读的绑定，其值的计算使用的技术方式和[这个](http://www.backalleycoder.com/2013/03/18/cross-browser-event-based-element-resize-detection/)类似：
 
 - clientWidth
 - `clientHeight`
@@ -138,11 +150,11 @@ bind:this={dom_node}
 
 
 
-#### 绑定DOM节点
+#### Binding a DOM node
 
-使用 `bind:this` ，可以创建一个到DOM节点的引用
+要获取一个 DOM 节点的引用，可以使用`bind:this`
 
-```php+HTML
+```HTML
 <script>
 	import { onMount } from 'svelte';
 
@@ -156,4 +168,3 @@ bind:this={dom_node}
 
 <canvas bind:this={canvasElement}></canvas>
 ```
-
