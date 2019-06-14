@@ -5,7 +5,7 @@
 {expression}
 ```
 
-文本还可以包含 javascript 表达式：
+文本也可以包含 javascript 表达式：
 
 ```html
 <h1>Hello {name}!</h1>
