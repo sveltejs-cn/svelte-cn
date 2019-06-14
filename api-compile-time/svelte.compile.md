@@ -63,7 +63,7 @@ const {
 - `ast` 是一个抽象语法树，代表了你组件的结构。
 - `warnings` 是在编译时产生的一个包含了若干 warning 对象的数组。每个 warning 包含了几个属性：
     - `code` 是用来区别 warning 类型的字符串
-    - `message` 使用了人类可读的术语来描述具体的问题。
+    - `message` 描述了具体的问题，使用了人类可读的格式。
     - `start` 和 `end`，如果 warning 与具体的（代码）位置相关，这两个属性是包含了 `line`，`column` 和 `character` 属性的对象。
     - `frame`，如果适用的话，是一个用行号来高亮非法代码的字符串。
 - `vars` 是一个包含了组件声明的数组，例如在 [eslint-plugin-svelte3](https://github.com/sveltejs/eslint-plugin-svelte3) 中被用到。每个变量包含以下几个属性：
