@@ -11,7 +11,7 @@ action = (node: HTMLElement, parameters: any) => {
 	destroy?: () => void
 }
 ```
-`Actions` 是一个元素被创建的时候会被调用的函数集，且会返回一个包含 `destory` 的钩子函数的对象，该方法会在元素被卸载的时候被调用。
+`Actions` 是一个元素被创建时会调用的函数集。函数集中的函数会返回一个包含 `destroy` 的钩子函数的对象，`destroy` 会在元素被卸载的时候被调用。
 
 ```html
 <script>
@@ -29,7 +29,7 @@ action = (node: HTMLElement, parameters: any) => {
 <div use:foo></div>
 ```
 
-`Action` 可以有多个参数，如果返回对象有 `update` 方法，每当这些参数改变的时候，这个函数会在 Svelte 已经更新标签之后会被立即被调用。
+`Action` 可以有多个参数，如果返回对象有 `update` 方法，只要这些参数发生改变，这个方法会在 Svelte 更新标签之后被立即调用。
 ```html
 <script>
 	export let bar;
@@ -51,4 +51,4 @@ action = (node: HTMLElement, parameters: any) => {
 
 <div use:foo={bar}></div>
 ```
-> 不用担心如果我们为每个组件实例都重新声明 `foo` 的 `Action` 会有什么影响- Svelte 会从组件的定义中移除不依赖于本地状态的函数。
+> 不用担心如果我们为每个组件实例都重新声明了 `foo` 会有什么影响—— Svelte 会从组件的定义中移除不依赖于本地状态的函数。
