@@ -1,7 +1,28 @@
 ### style
 
-写在`<style>`中的CSS与组件外部是隔离的
+`<style>`块中的CSS将只作用于该组件,成为私有样式，与外部隔离。
+这通过向受影响的元素添加一个基于组件样式的`class`来实现（例如，svelte-123xyz）。
+```html
+<style>
+	p {
+		/* this will only affect <p> elements in this component */
+		color: burlywood;
+	}
+</style>
+```
+可以通过使用`:global(...)`修饰符将样式作用域全局。
+```html
+<style>
+	:global(body) {
+		/* this will apply to <body> */
+		margin: 0;
+	}
 
-这个功能是通过给元素添加带有组件style哈希的class来实现的。eg（svelte-123xyz）
-
-可以通过使用`:global(...)`修饰符将样式作用域全局
+	div :global(strong) {
+		/* this will apply to all <strong> elements, in any
+			 component, that are inside <div> elements belonging
+			 to this component */
+		color: goldenrod;
+	}
+</style>
+```
