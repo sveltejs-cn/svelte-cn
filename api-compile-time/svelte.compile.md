@@ -58,7 +58,7 @@ const {
 ```
 
 - `js` 和 `css` 包含了以下属性：
-    - `code` 是一个 JavaScript 字符串
+    - `code` 是一个 JavaScript string
     - `map` 是一个 sourcemap，额外带有两个方便的方法 `toString()` 和 `toUrl()`
 - `ast` 是一个抽象语法树，代表了你组件的结构。
 - `warnings` 是在编译时产生的一个包含了若干 warning 对象的数组。每个 warning 包含了几个属性：
