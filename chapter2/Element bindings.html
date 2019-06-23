@@ -1,0 +1,932 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Element bindings · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Element bindings.html" />
+    
+    
+    <link rel="prev" href="Component event.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    开始之前
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    组件格式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/script.html">
+            
+                <a href="../chapter1/script.html">
+            
+                    
+                    &lt;script&gt;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/module.html">
+            
+                <a href="../chapter1/module.html">
+            
+                    
+                    &lt;script content="module"&gt;
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter1/style.html">
+            
+                <a href="../chapter1/style.html">
+            
+                    
+                    &lt;style&gt;
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="README.md">
+            
+                <span>
+            
+                    
+                    模版语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="Tags.html">
+            
+                <a href="Tags.html">
+            
+                    
+                    Tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="Attributes.html">
+            
+                <a href="Attributes.html">
+            
+                    
+                    Attributes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="Text expressions.html">
+            
+                <a href="Text expressions.html">
+            
+                    
+                    Text expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="HTML expressions.html">
+            
+                <a href="HTML expressions.html">
+            
+                    
+                    HTML expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="If blocks.html">
+            
+                <a href="If blocks.html">
+            
+                    
+                    If blocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="Each blocks.html">
+            
+                <a href="Each blocks.html">
+            
+                    
+                    Each blocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="Await block.html">
+            
+                <a href="Await block.html">
+            
+                    
+                    Await blocks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="Dom event.html">
+            
+                <a href="Dom event.html">
+            
+                    
+                    DOM events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="Component event.html">
+            
+                <a href="Component event.html">
+            
+                    
+                    Component events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.10" data-path="Element bindings.html">
+            
+                <a href="Element bindings.html">
+            
+                    
+                    Element bindings
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.10.1" data-path="Element bindings.html">
+            
+                <a href="Element bindings.html#绑定相关元素">
+            
+                    
+                    Binding related elements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.2" data-path="Element bindings.html">
+            
+                <a href="Element bindings.html#绑定SELECT值">
+            
+                    
+                    Binding  value
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.3" data-path="Element bindings.html">
+            
+                <a href="Element bindings.html#绑定媒体元素">
+            
+                    
+                    Media element bindings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.4" data-path="Element bindings.html">
+            
+                <a href="Element bindings.html#绑定DOM节点">
+            
+                    
+                    Binding a DOM node
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="Component Bindings.html">
+            
+                <a href="Component Bindings.html">
+            
+                    
+                    Component bindings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="Classes.html">
+            
+                <a href="Classes.html">
+            
+                    
+                    Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="Actions.html">
+            
+                <a href="Actions.html">
+            
+                    
+                    Actions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="Transitions.html">
+            
+                <a href="Transitions.html">
+            
+                    
+                    Transitions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.14.1" data-path="Transitions.html">
+            
+                <a href="Transitions.html#Transition参数">
+            
+                    
+                    Transition参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14.2" data-path="Transitions.html">
+            
+                <a href="Transitions.html#自定义过渡函数">
+            
+                    
+                    自定义过渡函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14.3" data-path="Transitions.html">
+            
+                <a href="Transitions.html#Transition事件">
+            
+                    
+                    Transition事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="Animations.html">
+            
+                <a href="Animations.html">
+            
+                    
+                    Animations
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.15.1" data-path="Animations.html">
+            
+                <a href="Animations.html#Animation参数">
+            
+                    
+                    Animation参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15.2" data-path="Animations.html">
+            
+                <a href="Animations.html#自定义Animation函数">
+            
+                    
+                    自定义Animation函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="svelte-self.html">
+            
+                <a href="svelte-self.html">
+            
+                    
+                    svelte:self
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="svelte-component.html">
+            
+                <a href="svelte-component.html">
+            
+                    
+                    svelte:component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="svelte-window.html">
+            
+                <a href="svelte-window.html">
+            
+                    
+                    svelte:window
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="svelte-body.html">
+            
+                <a href="svelte-body.html">
+            
+                    
+                    svelte:body
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="svelte-head.html">
+            
+                <a href="svelte-head.html">
+            
+                    
+                    svelte:head
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="svelte-options.html">
+            
+                <a href="svelte-options.html">
+            
+                    
+                    svelte:options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="debug.html">
+            
+                <a href="debug.html">
+            
+                    
+                    @debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../api-compile-time/">
+            
+                <a href="../api-compile-time/">
+            
+                    
+                    编译时
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../api-compile-time/svelte.compile.html">
+            
+                <a href="../api-compile-time/svelte.compile.html">
+            
+                    
+                    svelte.compile
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../api-compile-time/svelte.parse.html">
+            
+                <a href="../api-compile-time/svelte.parse.html">
+            
+                    
+                    svelte.parse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../api-compile-time/svelte.preprocess.html">
+            
+                <a href="../api-compile-time/svelte.preprocess.html">
+            
+                    
+                    svelte.preprocess
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../api-compile-time/svelte.walk.html">
+            
+                <a href="../api-compile-time/svelte.walk.html">
+            
+                    
+                    svelte.walk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../api-compile-time/svelte.VERSION.html">
+            
+                <a href="../api-compile-time/svelte.VERSION.html">
+            
+                    
+                    svelte.VERSION
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Element bindings</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="element-bindings">Element bindings</h3>
+<pre><code class="lang-html">bind:property={variable}
+</code></pre>
+<pre><code class="lang-html">bind:group={variable}
+</code></pre>
+<pre><code class="lang-html">bind:this={dom_node}
+</code></pre>
+<p>&#x6570;&#x636E;&#x901A;&#x5E38;&#x4ECE;&#x7236;&#x7EA7;&#x6D41;&#x5411;&#x5B50;&#x7EA7;&#x3002;<code>bind:</code>&#x6307;&#x4EE4;&#x5141;&#x8BB8;&#x6570;&#x636E;&#x4EE5;&#x53E6;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x4ECE;&#x5B50;&#x7EA7;&#x6D41;&#x5411;&#x7236;&#x7EA7;&#x3002;&#x5927;&#x591A;&#x6570;&#x7684;&#x7ED1;&#x5B9A;&#x662F;&#x7ED1;&#x5B9A;&#x5728;&#x7279;&#x5B9A;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x6700;&#x7B80;&#x5355;&#x53CD;&#x6620;&#x4E86;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x7684;&#x7ED1;&#x5B9A;&#xFF0C;&#x4F8B;&#x5982;<code>input.value</code>&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">bind:value</span>=<span class="hljs-string">{name}</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">bind:value</span>=<span class="hljs-string">{text}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">bind:checked</span>=<span class="hljs-string">{yes}</span>&gt;</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#xFF0C;&#x5C5E;&#x6027;&#x503C;&#x548C;&#x5C5E;&#x6027;&#x540D;&#x76F8;&#x540C;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x7B80;&#x5199;&#x7684;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- These are equivalent --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">bind:value</span>=<span class="hljs-string">{value}</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">bind:value</span>&gt;</span>
+</code></pre>
+<p>&#x5F3A;&#x5236;&#x8F93;&#x5165;&#x7684;&#x503C;&#x662F;&#x6570;&#x5B57;&#xFF1B;&#x5373;&#x4F7F;<code>input.value</code>&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;svelte&#x5C06;&#x628A;&#x5B83;&#x5F53;&#x4F5C;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x3002;&#x5982;&#x679C;&#x8F93;&#x5165;&#x4E3A;&#x7A7A;&#x6216;&#x65E0;&#x6548;&#xFF08;&#x5F53;<code>type=&quot;number&quot;</code>&#xFF09;&#xFF0C;&#x5219;&#x8BE5;&#x503C;&#x4E3A; <code>undefined</code>&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> <span class="hljs-attr">bind:value</span>=<span class="hljs-string">{num}</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;range&quot;</span> <span class="hljs-attr">bind:value</span>=<span class="hljs-string">{num}</span>&gt;</span>
+</code></pre>
+<h4 id="binding-related-elements">Binding related elements</h4>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>bind:group</code> &#x6765;&#x8BA9; <code>input</code> &#x4E00;&#x8D77;&#x5DE5;&#x4F5C;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">let</span> tortilla = <span class="hljs-string">&apos;Plain&apos;</span>;
+    <span class="hljs-keyword">let</span> fillings = [];
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- grouped radio inputs are mutually exclusive --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">bind:group</span>=<span class="hljs-string">{tortilla}</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Plain&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">bind:group</span>=<span class="hljs-string">{tortilla}</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Whole wheat&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">bind:group</span>=<span class="hljs-string">{tortilla}</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Spinach&quot;</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- grouped checkbox inputs populate an array --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">bind:group</span>=<span class="hljs-string">{fillings}</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Rice&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">bind:group</span>=<span class="hljs-string">{fillings}</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Beans&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">bind:group</span>=<span class="hljs-string">{fillings}</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Cheese&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">bind:group</span>=<span class="hljs-string">{fillings}</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Guac (extra)&quot;</span>&gt;</span>
+</code></pre>
+<h4 id="binding-select-value">Binding <code>&lt;select&gt;</code> value</h4>
+<p><code>&lt;select&gt;</code>&#x7ED1;&#x5B9A;&#x7684;&#x503C;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x662F; selected &#x7684;<code>&lt;option&gt;</code>&#x4E0A;&#x7684;value&#x5C5E;&#x6027;&#x7684;&#x503C;&#xFF0C;&#x8BE5;&#x503C;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;&#x503C;&#xFF08;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x53EF;&#x4EE5;&#x662F; DOM &#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x503C;&#xFF09;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">bind:value</span>=<span class="hljs-string">{selected}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{a}</span>&gt;</span>a<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{b}</span>&gt;</span>b<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{c}</span>&gt;</span>c<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+</code></pre>
+<p><code>&lt;select multiple&gt;</code> &#x7684;&#x8868;&#x73B0;&#x548C; <code>checkbox</code> &#x7EC4;&#x4E00;&#x6837;&#xFF1A;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">multiple</span> <span class="hljs-attr">bind:value</span>=<span class="hljs-string">{fillings}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Rice&quot;</span>&gt;</span>Rice<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Beans&quot;</span>&gt;</span>Beans<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Cheese&quot;</span>&gt;</span>Cheese<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;Guac (extra)&quot;</span>&gt;</span>Guac (extra)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+</code></pre>
+<p>&#x5F53; <code>&lt;option&gt;</code> &#x7684;<code>value</code>&#xFF0C;&#x548C;<code>&lt;option&gt;</code> &#x4E2D;&#x7684;&#x6587;&#x672C;&#x5185;&#x5BB9;&#x76F8;&#x540C;&#xFF0C;&#x5219; <code>value</code> &#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x88AB;&#x7701;&#x7565;&#x3002;</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">multiple</span> <span class="hljs-attr">bind:value</span>=<span class="hljs-string">{fillings}</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Rice<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Beans<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Cheese<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>Guac (extra)<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+</code></pre>
+<h4 id="media-element-bindings">Media element bindings</h4>
+<p>&#x5A92;&#x4F53;&#x5143;&#x7D20;(<code>audio</code>&#x548C;<code>video</code>)&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x5957;&#x7ED1;&#x5B9A;&#x89C4;&#x5219;&#xFF1A;</p>
+<p>&#x56DB;&#x4E2A;&#x53EA;&#x8BFB;&#x7684;&#x5C5E;&#x6027;</p>
+<ul>
+<li><code>duration</code>(&#x53EA;&#x8BFB;) - video &#x7684;&#x603B;&#x65F6;&#x957F;&#xFF0C;&#x5355;&#x4F4D;&#x662F;&#x79D2;</li>
+<li><code>buffered</code>(&#x53EA;&#x8BFB;) - &#x4E00;&#x4E2A;<code>{start, end}</code>&#x5BF9;&#x8C61;&#x6570;&#x7EC4;</li>
+<li><code>seekable</code>(&#x53EA;&#x8BFB;) - &#x540C;&#x4E0A;</li>
+<li><code>played</code>(&#x53EA;&#x8BFB;) - &#x540C;&#x4E0A;</li>
+</ul>
+<p>&#x4E09;&#x4E2A;&#x53EF;&#x4EE5;&#x53CC;&#x5411;&#x7ED1;&#x5B9A;&#x7684;&#x5C5E;&#x6027;</p>
+<ul>
+<li>currentTime&#xFF1A; &#x5F53;&#x524D;&#x89C6;&#x9891;&#x7684;&#x64AD;&#x653E;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5355;&#x4F4D;&#x662F;&#x79D2;</li>
+<li>paused&#xFF1A; &#x662F;&#x5426;&#x662F;&#x6682;&#x505C;</li>
+<li>volume&#xFF1A; &#x97F3;&#x91CF;&#xFF0C;&#x662F;<code>0</code>&#x548C;<code>1</code>&#x4E4B;&#x95F4;&#x7684;&#x503C;</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">video</span>
+    <span class="hljs-attr">src</span>=<span class="hljs-string">{clip}</span>
+    <span class="hljs-attr">bind:duration</span>
+    <span class="hljs-attr">bind:buffered</span>
+    <span class="hljs-attr">bind:seekable</span>
+    <span class="hljs-attr">bind:played</span>
+    <span class="hljs-attr">bind:currentTime</span>
+    <span class="hljs-attr">bind:paused</span>
+    <span class="hljs-attr">bind:volume</span>
+&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
+</code></pre>
+<h4 id="block-level-element-bindings">Block-level element bindings</h4>
+<p>&#x5757;&#x7EA7;&#x5143;&#x7D20;&#x6709;4&#x4E2A;&#x53EA;&#x8BFB;&#x7684;&#x7ED1;&#x5B9A;&#xFF0C;&#x5176;&#x503C;&#x7684;&#x8BA1;&#x7B97;&#x4F7F;&#x7528;&#x7684;&#x6280;&#x672F;&#x65B9;&#x5F0F;&#x548C;<a href="http://www.backalleycoder.com/2013/03/18/cross-browser-event-based-element-resize-detection/" target="_blank">&#x8FD9;&#x4E2A;</a>&#x7C7B;&#x4F3C;&#xFF1A;</p>
+<ul>
+<li>clientWidth</li>
+<li><code>clientHeight</code></li>
+<li><code>offsetWidth</code></li>
+<li><code>offsetHeight</code></li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+    <span class="hljs-attr">bind:offsetWidth</span>=<span class="hljs-string">{width}</span>
+    <span class="hljs-attr">bind:offsetHeight</span>=<span class="hljs-string">{height}</span>
+&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Chart</span> {<span class="hljs-attr">width</span>} {<span class="hljs-attr">height</span>}/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+</code></pre>
+<h4 id="binding-a-dom-node">Binding a DOM node</h4>
+<p>&#x8981;&#x83B7;&#x53D6;&#x4E00;&#x4E2A; DOM &#x8282;&#x70B9;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>bind:this</code></p>
+<pre><code class="lang-HTML"><span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">import</span> { onMount } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;svelte&apos;</span>;
+
+    <span class="hljs-keyword">let</span> canvasElement;
+
+    onMount(() =&gt; {
+        <span class="hljs-keyword">const</span> ctx = canvasElement.getContext(<span class="hljs-string">&apos;2d&apos;</span>);
+        drawStuff(ctx);
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">bind:this</span>=<span class="hljs-string">{canvasElement}</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Component event.html" class="navigation navigation-prev " aria-label="Previous page: Component events">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Element bindings.html#绑定相关元素" class="navigation navigation-next " aria-label="Next page: Binding related elements">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Element bindings","level":"1.3.10","depth":2,"next":{"title":"Binding related elements","level":"1.3.10.1","depth":3,"anchor":"#绑定相关元素","path":"chapter2/Element bindings.md","ref":"chapter2/Element bindings.md#绑定相关元素","articles":[]},"previous":{"title":"Component events","level":"1.3.9","depth":2,"path":"chapter2/Component event.md","ref":"chapter2/Component event.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/Element bindings.md","mtime":"2019-06-15T06:03:46.580Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2019-06-23T13:27:47.935Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
