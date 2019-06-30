@@ -10,4 +10,4 @@
 <svelte:component this={currentSelection.component} foo={bar}/>
 ```
 
-如果 `this` 对应的值为 `false` ,则不回渲染组件。
+如果 `this` 的值能够被转换成 `false`（即 `Boolean(this) 为 false`） ,则不会渲染组件。
