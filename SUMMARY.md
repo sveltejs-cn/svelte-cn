@@ -37,6 +37,7 @@
   * [svelte:head](chapter2/svelte-head.md)
   * [svelte:options](chapter2/svelte-options.md)
   * [@debug](chapter2/debug.md)
+* [运行时](runtime/README.md)
 * [编译时](api-compile-time/README.md)
   * [svelte.compile](api-compile-time/svelte.compile.md)
   * [svelte.parse](api-compile-time/svelte.parse.md)
