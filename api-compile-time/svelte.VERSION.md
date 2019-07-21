@@ -1,3 +1,5 @@
+###svelte.VERSION
+
 当前的版本，跟 package.json 中设置的一样。
 
 ```js
