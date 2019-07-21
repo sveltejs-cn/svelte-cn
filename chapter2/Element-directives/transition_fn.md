@@ -1,40 +1,17 @@
-### Transitions
+### transition:<font color=#9595a0>*fn*</font>
 ```
-transition:name
-```
-```
-transition:name={params}
+transition:fn
 ```
 ```
-transition:name|local
+transition:fn={params}
 ```
 ```
-transition:name|local={params}
+transition:fn|local
 ```
 ```
-in:name
+transition:fn|local={params}
 ```
-```
-in:name={params}
-```
-```
-in:name|local
-```
-```
-in:name|local={params}
-```
-```
-out:name
-```
-```
-out:name={params}
-```
-```
-out:name|local
-```
-```
-out:name|local={params}
-```
+
 ```js
 transition = (node: HTMLElement, params: any) => {
 	delay?: number,
@@ -44,7 +21,7 @@ transition = (node: HTMLElement, params: any) => {
 	tick?: (t: number, u: number) => void
 }
 ```
-`transition` 是在元素的状态变更的时候触发的，如元素的进入和离开。过渡函数在组件首次挂载的时候不会执行，后续的一连串的更新才会执行。
+`transition` 是在元素的状态变更的时候触发的，如元素的进入和离开。
 
 在正在离开的块中的元素会一直在 DOM 中，直到所有的过渡动画执行完成。
 ```html
@@ -56,14 +33,6 @@ transition = (node: HTMLElement, params: any) => {
 ```
 `transition: ` 表明是一个双向的过渡，意思是在变化的执行过程中平滑的来回切换执行方向。
 
-`in: ` 和 `out:` 指令不是双向的。进入的过渡执行的过程中，切换至离开动画，进入动画会继续执行，且与离开动画并存。如果之前离开的动画还未执行完成，会重新开启离开的动画。
-
-```html
-{#if visible}
-	<div in:fly out:fade>
-		flies in, fades out
-	</div>
-{/if}
 ```
 > 默认情况下，过渡动画在首次渲染的时候不会执行，你可以在[创建组件](https://svelte.dev/docs#Client-side_component_API)的时候，通过定义 `intro: true` 来修改默认行为。
 

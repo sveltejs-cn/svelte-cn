@@ -1,4 +1,4 @@
-### Actions
+### animate:
 
 ```
 animate:name
@@ -45,7 +45,7 @@ DOMRect {
 	<li animate:flip="{{ delay: 500 }}">{item}</li>
 {/each}
 ```
-> 双大括号 `{{curlies}}` 不是特殊的语法，只是一个在表达式标签中包含一个对象字面量
+双大括号 `{{curlies}}` 不是特殊的语法，只是一个在表达式标签中包含一个对象字面量
 
 #### <p id="自定义Animation函数">自定义Animation函数</p>
 
