@@ -38,9 +38,13 @@
   * [svelte:options](chapter2/svelte-options.md)
   * [@debug](chapter2/debug.md)
 * [运行时](runtime/README.md)
+  * [Client-side component API](runtime/Client-side component API.md)
+  * [Custom element API](runtime/Custom element API.md)
+  * [Server-side component API](runtime/Server-side component API.md)
 * [编译时](api-compile-time/README.md)
   * [svelte.compile](api-compile-time/svelte.compile.md)
   * [svelte.parse](api-compile-time/svelte.parse.md)
   * [svelte.preprocess](api-compile-time/svelte.preprocess.md)
   * [svelte.walk](api-compile-time/svelte.walk.md)
   * [svelte.VERSION](api-compile-time/svelte.VERSION.md)
+
