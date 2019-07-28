@@ -38,6 +38,8 @@
   * [svelte:options](chapter2/svelte-options.md)
   * [@debug](chapter2/debug.md)
 * [运行时](runtime/README.md)
+  * [svelte/animate](runtime/svelte.animate.md)
+    * [flip](runtime/svelte.animate.md#flip)
 * [编译时](api-compile-time/README.md)
   * [svelte.compile](api-compile-time/svelte.compile.md)
   * [svelte.parse](api-compile-time/svelte.parse.md)
