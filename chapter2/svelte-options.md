@@ -14,5 +14,5 @@
 - `immutable={false}` - 默认值。对于可变对象是否发生了变化，`Svelte` 会更加保守
 - `accessors={true}` - 为组件的 `props` 添加 `getters` 和 `setters`
 - `accessors={false}` — 默认值
-- `namespace="..."` - 指定命名空间，当组件被使用的时候，最常见的是`svg`
+- `namespace="..."` - 指定命名空间，表明这个组件将会在哪里被使用，最常见的是`svg`
 - `tag="..."` - 将此组件编译为自定义元素时使用的名称
