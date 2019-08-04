@@ -1,4 +1,4 @@
-### Classes
+### class:<font color=#9595a0>*name*</font>
 ```
 class:name={value}
 ```
